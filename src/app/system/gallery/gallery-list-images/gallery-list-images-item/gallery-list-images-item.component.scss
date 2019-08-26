@@ -1,0 +1,14 @@
+.image {
+  &-wrapper {
+    &:hover {
+      .tooltip {
+        opacity: 1;
+        transition: all .4s ease;
+      }
+    }
+  }
+}
+
+.tooltip {
+  opacity: 0;
+}

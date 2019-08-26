@@ -1,0 +1,10 @@
+<div class="gallery-list" *ngIf="(imagesList$ | async) as images">
+  <ng-container *ngIf="images.length; else firstImage">
+    <ng-container *ngFor="let image of images; trackBy: trackByFn">
+      <app-gallery-list-images-item class="gallery-list__item" [image]="image"></app-gallery-list-images-item>
+    </ng-container>
+  </ng-container>
+  <ng-template #firstImage>
+    <app-first-image></app-first-image>
+  </ng-template>
+</div>

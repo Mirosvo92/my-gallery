@@ -1,0 +1,15 @@
+.auth-form {
+  width: 300px;
+  display: flex;
+  padding-top: 15px;
+  flex-direction: column;
+  text-align: center;
+  border: 3px solid black;
+  box-shadow: 8px 6px;
+  border-radius: 10px;
+}
+
+.auth-form__buttons {
+  display: flex;
+  justify-content: space-around;
+}

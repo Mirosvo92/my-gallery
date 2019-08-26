@@ -1,0 +1,13 @@
+<div class="image-editor" *ngIf="(image$ | async) as image">
+  <app-back-button class="image-editor__back-button" [link]="['system', 'gallery']" ></app-back-button>
+  <app-image-editor-item class="image"
+                         [imageLink]="image.imageLink"
+                         [color]="image.color"
+                         [position]="image.position"
+                         [textTooltip]="image.description"></app-image-editor-item>
+  <app-image-editor-control class="control"
+                            [color]="image.color"
+                            [position]="image.position"
+                            [imageId]="image.id"
+                            [textTooltip]="image.description"></app-image-editor-control>
+</div>

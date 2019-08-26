@@ -1,0 +1,4 @@
+<div class="image-wrapper">
+  <img class="image {{ image.position }}" (click)="openImageEditor()" [src]="image.imageLink" [alt]="image.description">
+  <app-tooltip class="tooltip" [text]="image.description" appTooltipPosition [style.color]="image.color" [position]='image.position'></app-tooltip>
+</div>

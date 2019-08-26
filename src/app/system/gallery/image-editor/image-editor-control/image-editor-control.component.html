@@ -1,0 +1,31 @@
+<form [formGroup]="editForm">
+  <!-- positions -->
+  <div formGroupName="position">
+    <ng-container *ngFor="let position of positionControls">
+      <span class="input-title">{{ position.text }}</span>
+      <input class="form-input"
+             [type]="position.type"
+             (input)="onPositionChanged(position.name, $event.target.value)"
+             [formControlName]="position.name">
+
+    </ng-container>
+  </div>
+  <!-- name -->
+  <span class="input-title">text tooltip</span>
+  <input class="form-input"
+         type="text"
+         name="description"
+         (input)="onDescriptionChanged($event.target.value)"
+         formControlName="description">
+  <!-- colors -->
+  <span class="input-title">color</span>
+  <select formControlName="color" class="form-input" [value]="color" (change)="onColorChanged($event.target.value)">
+    <option *ngFor="let col of colors"
+            [value]="col.value">{{col.value}}
+    </option>
+  </select>
+  <div class="buttons">
+    <button class="button" [disabled]="editForm.invalid" (click)="save($event.target)">Save</button>
+    <button class="button" (click)="delete($event.target)">Delete</button>
+  </div>
+</form>

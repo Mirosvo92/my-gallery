@@ -1,0 +1,27 @@
+.header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: black;
+  &__left-block {
+    color: white;
+    font-size: 20px;
+  }
+  &__right-block {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.email {
+  margin-right: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+.sing-out {
+  color: white;
+  font-size: 20px;
+}

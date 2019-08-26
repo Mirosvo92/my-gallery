@@ -1,0 +1,37 @@
+.image-editor {
+  position: relative;
+  display: flex;
+  margin: 30px;
+  &__back-button {
+    position: absolute;
+    z-index: 1;
+    top: -32px;
+  }
+}
+
+.image {
+  width: 30%;
+  max-height: 575px;
+  display: block;
+}
+
+.control {
+  margin-left: 30px;
+}
+
+@media (max-width: 767px ) {
+  .image-editor {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 70%;
+    max-height: 575px;
+    display: block;
+  }
+
+  .control {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}

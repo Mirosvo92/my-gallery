@@ -1,0 +1,8 @@
+<form #authForm="ngForm" class="auth-form" >
+  <app-input [title]="'Email (myEmail@email.com)'" [name]="'email'" [isEmail]="true" [type]="'email'" ></app-input>
+  <app-input [title]="'Password (at least 6 characters )'" [minLength]="6" [type]="'password'" [name]="'password'"></app-input>
+  <div class="auth-form__buttons">
+    <button [disabled]="form.invalid" class="button" (click)="singIn($event.target)">Sign in</button>
+    <button [disabled]="form.invalid" class="button" (click)="singUp($event.target)">Sign up</button>
+  </div>
+</form>

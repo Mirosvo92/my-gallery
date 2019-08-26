@@ -1,0 +1,7 @@
+<header class="header">
+  <div class="header__left-block"><button (click)="goMainPage()" >My Gallery</button></div>
+  <div class="header__right-block" *ngIf="userService.isUser$ | async" >
+    <span class="email">{{ userService.userData.email }}</span>
+    <button class="sing-out" (click)="singOut()" >Sing out</button>
+  </div>
+</header>

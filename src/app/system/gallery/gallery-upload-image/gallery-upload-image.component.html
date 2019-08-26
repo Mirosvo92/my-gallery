@@ -1,0 +1,4 @@
+<div class="upload-button" (click)="file.click()">
+  <span>+</span>
+</div>
+<input type="file" #file (change)="upload($event.target)" accept="image/*" style="display: none">

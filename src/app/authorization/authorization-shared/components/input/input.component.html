@@ -1,0 +1,10 @@
+<div>{{ title }}</div>
+<input [type]="type"
+       class="form-input"
+       ngModel
+       required
+       email
+       [email]="isEmail"
+       autocomplete="new-password"
+       [minlength]="minLength"
+       [name]="name"/>
